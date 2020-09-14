@@ -1,10 +1,7 @@
-<?PHP
-$names=array("Dany","Dylan","Lenci","Celio","Valentin");
-
-for ($i=0; $i <5 ; $i++) { 
-    # code...
-    echo "Storaged Name ".($i+1)." ".$names[$i];
-    echo "<br>";
-}
- 
+<?php
+    
+    require_once"controladores/plantilla.controlador.php";
+    require_once"controladores/formularios.controlador.php";
+    $plantilla= new controladorPlantilla();
+    $plantilla ->ctrTraerPlantilla();//-> ejecutar metodo
 ?>
