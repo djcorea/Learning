@@ -1,3 +1,7 @@
+<?php 
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,8 +22,9 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
@@ -33,48 +38,72 @@
         <div class="container">
 
             <ul class="nav nav-justified py-2 nav-pills">
-              
+
                 <?php if(isset($_GET["pagina"])):?>
-                    
-                    <?php if ($_GET["pagina"]=="registro"): ?>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="index.php?pagina=registro">REGISTRO</a>
-                        </li>
-                    <?php else: ?>
-                        <li class="nav-item">
-                            <a class="nav-link " href="index.php?pagina=registro">REGISTRO</a>
-                        </li>
-                    <?php endif ?>
 
-                    <?php if ($_GET["pagina"]=="ingreso"): ?>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="index.php?pagina=ingreso">INGRESO</a>
-                        </li>
-                    <?php else: ?>
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.php?pagina=ingreso">INGRESO</a>
-                        </li>
-                    <?php endif ?>
+                <?php if ($_GET["pagina"]=="registro"): ?>
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.php?pagina=registro">REGISTRO</a>
+                </li>
+                <?php else: ?>
+                <li class="nav-item">
+                    <a class="nav-link " href="index.php?pagina=registro">REGISTRO</a>
+                </li>
+                <?php endif ?>
 
-                    <?php if ($_GET["pagina"]=="inicio"): ?>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="index.php?pagina=inicio">INICIO</a>
-                        </li>
-                    <?php else: ?>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="index.php?pagina=inicio">INICIO</a>
-                        </li>
-                    <?php endif ?>
+                <?php if ($_GET["pagina"]=="ingreso"): ?>
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.php?pagina=ingreso">INGRESO</a>
+                </li>
+                <?php else: ?>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.php?pagina=ingreso">INGRESO</a>
+                </li>
+                <?php endif ?>
 
-                    <?php if ($_GET["pagina"]=="salir"): ?>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="index.php?pagina=salir">SALIR</a>
-                        </li>
-                    <?php else: ?>
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.php?pagina=salir">SALIR</a>
-                        </li>
-                    <?php endif ?>
+                <?php if ($_GET["pagina"]=="inicio"): ?>
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.php?pagina=inicio">INICIO</a>
+                </li>
+                <?php else: ?>
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.php?pagina=inicio">INICIO</a>
+                </li>
+                <?php endif ?>
+
+                <?php if ($_GET["pagina"]=="salir"): ?>
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.php?pagina=salir">SALIR</a>
+                </li>
+                <?php else: ?>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.php?pagina=salir">SALIR</a>
+                </li>
+                <?php endif ?>
+
+                <?php else: ?>
+
+                <!-- GET: $_GET["variable"] Variables que se pasan como parámetros Vía URL ( También conocido como cadena de consulta a través de la URL) 
+                        Cuando es la primera variable se separa con ?
+                        las que siguen a continuación se separan con &
+                        -->
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.php?pagina=registro">Registro</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="index.php?pagina=ingreso">Ingreso</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="index.php?pagina=inicio">Inicio</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="index.php?pagina=salir">Salir</a>
+                </li>
+
 
                 <?php endif ?>
 

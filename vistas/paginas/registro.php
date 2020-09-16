@@ -54,7 +54,7 @@
                             window.history.replaceState(null,null, window.location.href);
                         }
                     </script>';
-                    echo'<div class="alert alert-success">' .$_POST["rNombre"].'a sido registrado</div>';
+                    echo'<div class="alert alert-success">' .$_POST["rNombre"].' a sido registrado</div>';
                 }
             ?>
 

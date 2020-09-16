@@ -1,22 +1,37 @@
-<h1>INGRESO</h1>
-<form>
+<h1 class="text-center">INGRESO</h1>
 
-    <div class="form-group">
-        <label for="email">Email address:</label>
-        <input type="email" class="form-control" placeholder="Enter email" id="email">
-    </div>
+<div class="d-flex justify-content-center text-center">
 
-    <div class="form-group">
-        <label for="pwd">Password:</label>
-        <input type="password" class="form-control" placeholder="Enter password" id="pwd">
-    </div>
+    <form class="p-5 bg-light" method="post">
+        <div class="form-group">
+            <label for="email">Email address:</label>
 
-    <div class="form-group form-check">
-        <label class="form-check-label">
-            <input class="form-check-input" type="checkbox"> Remember me
-        </label>
-    </div>
+            <div class="form-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-envelope-open"></i></span>
+                    <input name="IngresoEmail" type="email" class="form-control" placeholder="Enter email" id="email">
+                </div>
+            </div>
+        </div>
 
-    <button type="submit" class="btn btn-primary">Submit</button>
+        <div class="form-group">
+            <label for="pwd">Password:</label>
 
-</form>
+            <div class="form-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                    <input name="IngresoPwd" type="password" class="form-control" placeholder="Enter password" id="pwd">
+                </div>
+            </div>
+        </div>
+
+        <?php
+           $ingreso = new controladorFormularios;
+           $ingreso -> ctrIngreso();
+           
+       ?>
+
+        <button type="submit" class="btn btn-primary">LOGIN</button>
+
+    </form>
+</div>
