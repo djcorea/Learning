@@ -8,7 +8,7 @@ for ($i=0; $i <5 ; $i++) {
         # code...
         echo "Par";
     }
-    echo "<br>";
+   // echo "<br>";
 
 }
  
