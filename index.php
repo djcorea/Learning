@@ -5,7 +5,9 @@
     require_once"modelos/formularios.modelo.php";
       
     $plantilla= new controladorPlantilla();
-    $plantilla ->ctrTraerPlantilla();//-> ejecutar metodo
+    $plantilla ->ctrTraerPlantilla();
+
+//-> ejecutar metodo
 
 
 ?>
