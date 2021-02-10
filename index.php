@@ -7,7 +7,7 @@
     $plantilla= new controladorPlantilla();
     $plantilla ->ctrTraerPlantilla();
 
-//-> ejecutar metodo
+//-> ejecutar metodos
 
 
 ?>
